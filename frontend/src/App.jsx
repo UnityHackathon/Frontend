@@ -1,14 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Login, Home } from "./pages";
 
-function App() {
+const App = () =>(
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login/>} />
+        </Routes>
 
-  return (
-    <>
-      <div>
-        UnityCare
-      </div>
-     
-    </>
+    </BrowserRouter>
   )
-}
 
-export default App
+
+export default App;
